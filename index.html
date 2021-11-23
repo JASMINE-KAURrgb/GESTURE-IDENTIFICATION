@@ -1,0 +1,68 @@
+<head>
+    <title>Hand Gesture Identification</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+      <h3 class="btn btn-warning heading">
+       HAND GESTURE IDENTIFICATION
+        <br>
+        <span> &#9994;</span>
+        <span>&#128076;</span>
+        <span>&#128077;</span>
+        <span>&#128400;</span>
+        <span>&#128071;</span>
+        <span> &#128078;</span>
+      </h3>
+
+      <br>
+      <br>
+
+      <p style="font-size: 22px; color:darkslateblue">Click on the button to capture your image, then click the other button to identify your gesture.
+      
+      <p style="color: darkviolet;"> I can identify-</p><br>
+      <p style="color:darkblue">Thumbs Up, Open Hand</p><br>
+      <p style="color:darkmagenta">Punch, V shape, Perfect/ Awesome gesture</p><br>
+      <p style="color:blue">O shape And  Half Heart Shape</p><br>
+    </p><br>
+    <div class="col-md-4 col-sm-12 col-xs-12">
+      <label> Webcam view -</label>
+      <div id="camera"></div><br><br>
+      <button onclick="take_snapshot()" class="btn btn-warning"> CLICK TO CAPTURE IMAGE</button>
+    </div>
+    <div class="col-md-4 col-sm-12 col-xs-12">
+
+      <label>Prediciton 1 -</label>
+      <p class="gesture_name" id="result_gesture"></p>
+      <p class="gesture" id="update_gesture_1"></p>
+      <br><br>
+      <label>Prediciton 2 -</label>
+      <p class="gesture_name" id="result_gesture2"></p>
+      <p class="gesture" id="update_gesture_2"></p>
+    </div>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Snapshot - </label>
+<div id="result"></div>
+        <br><br>
+<button onclick="check()" class="btn btn-success">CLICK TO PREDICT GESTURE</button>
+      </div>
+
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
